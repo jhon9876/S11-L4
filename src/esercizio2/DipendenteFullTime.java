@@ -11,39 +11,17 @@ package esercizio2;
  * METTENDOLI IN UN UNICO ARRAY E CALCOLA I LORO STIPENDI TOTALI. UTILIZZA IL POLIMORFISMO PER
  * TRATTARE TUTTI I DIPENDENTI IN MODO UNIFORME*/
 
-
 import enums.ValoriPossibiliDipartimento;
 
-public abstract class Dipendente2 {
-    private String matricola;
-    private double stipendio;
-    private ValoriPossibiliDipartimento dipartimento;
+public class DipendenteFullTime extends Dipendente2 {
 
-    public Dipendente2(String m, ValoriPossibiliDipartimento d) {
-        this.matricola = m;
-        this.stipendio = 1500;
-        this.dipartimento = d;
+    public DipendenteFullTime(String m, ValoriPossibiliDipartimento d) {
+        super(m, d);
     }
 
-    public abstract void calculateSalary(double value);
-
-    /*Getters e setters*/
-
-    public String getMatricola() {
-        return matricola;
-    }
-
-
-    public double getStipendio() {
-        return stipendio;
-    }
-
-
-    public ValoriPossibiliDipartimento getDipartimento() {
-        return dipartimento;
-    }
-
-    public void setDipartimento(ValoriPossibiliDipartimento dipartimento) {
-        this.dipartimento = dipartimento;
+    @Override
+    public void calculateSalary(double oreLavorate) {
+        double stipendioMensile = oreLavorate * 15;
+        System.out.println("Lo stipendio del dipendente full time è pari a: " + stipendioMensile);
     }
 }
