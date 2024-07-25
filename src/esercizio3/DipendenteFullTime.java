@@ -19,10 +19,10 @@ public class DipendenteFullTime extends Dipendente2 {
         super(m, d);
     }
 
-    @Override
-    public void chekIn() {
+    /*@Override*/
+   /* public void chekIn() {
         System.out.println("Il volontario inizia il turno alle 18");
-    }
+    }*/
 
     @Override
     public void calculateSalary(double oreLavorate) {

@@ -27,6 +27,9 @@ public abstract class Dipendente2 implements InizioTurno {
 
     public abstract void calculateSalary(double value);
 
+    public void chekIn() {
+        System.out.println("Il volontario inizia il turno alle 18");
+    }
     /*Getters e setters*/
 
     public String getMatricola() {

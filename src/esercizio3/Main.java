@@ -10,9 +10,6 @@ package esercizio3;
  * NEL MAIN CREARE UN ARRAY CON DIPENDENTI E VOLONTARI E CHIAMARE IL METODO CHECKIN PER OGNUNO DI ESSI*/
 
 import enums.ValoriPossibiliDipartimento;
-import esercizio2.DipendenteFullTime;
-import esercizio2.DipendentePartTime;
-import esercizio2.Dirigente;
 import interfaces.InizioTurno;
 
 public class Main {
@@ -23,11 +20,11 @@ public class Main {
         Volontario vl1 = new Volontario(20, "Alessio", "Informatico");
         Volontario vl2 = new Volontario(30, "Aldo", "Musicista");
 
-        InizioTurno[] I = {vl1, vl2};
-
-        for (int i = 0; i < I.length; i++) {
-            if (I[i] instanceof Volontario) {
-                Volontario v1 = (Volontario) I[i];
+        /* InizioTurno[] I = {df1, dp1, dg1, vl1, vl2};*/
+        InizioTurno[] lavoratori = {df1, dp1, dg1, vl1, vl2};
+        for (int i = 0; i < lavoratori.length; i++) {
+            if (lavoratori[i] instanceof Volontario) {
+                Volontario v1 = (Volontario) lavoratori[i];
                 v1.chekIn();
             }
         }

@@ -7,10 +7,10 @@ public class Dirigente extends Dipendente2 {
         super(m, d);
     }
 
-    @Override
+   /* @Override
     public void chekIn() {
         System.out.println("Il volontario inizia il turno alle 18");
-    }
+    }*/
 
     public void calculateSalary(double oreLavorate) {
         double stipendioMensile = oreLavorate * 40;
